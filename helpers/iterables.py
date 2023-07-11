@@ -1,9 +1,11 @@
 from datetime import timedelta
 
+
 class DateRangeIterable:
     """
     Custom iterable on datetime
     """
+
     def __init__(self, start_date, end_date):
         self.start_date = start_date
         self.end_date = end_date
