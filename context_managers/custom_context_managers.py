@@ -15,7 +15,7 @@ def start() -> None:
     Logging start
     :return: None
     """
-    logging.warning(f"start")
+    logging.warning("start")
 
 
 # *** First example of context manager *** #
@@ -31,10 +31,12 @@ class DBHandler:
 
 
 def db_backup_1():
+    # pylint: disable=missing-function-docstring
     logging.warning("starting backup")
 
 
 def main():
+    # pylint: disable=missing-function-docstring
     with DBHandler():
         db_backup_1()
 
@@ -45,6 +47,7 @@ def main():
 # *** Second example of context manager *** #
 @contextlib.contextmanager
 def db_handler():
+    # pylint: disable=missing-function-docstring
     try:
         stop()
         yield
@@ -59,6 +62,7 @@ with db_handler():
 
 # *** 3th example of context manager by decorator *** #
 class dbhandler_decorator(contextlib.ContextDecorator):
+    # pylint: disable=invalid-name
     def __enter__(self):
         stop()
         return self
@@ -69,4 +73,5 @@ class dbhandler_decorator(contextlib.ContextDecorator):
 
 @dbhandler_decorator()
 def offline_backup():
-    logging.warning(f"offline backup")
+    # pylint: disable=missing-function-docstring
+    logging.warning("offline backup")
