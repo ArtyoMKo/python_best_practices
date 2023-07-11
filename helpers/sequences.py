@@ -3,6 +3,8 @@ from typing import Iterable
 
 
 class Items(Sequence):
+    """Custom sequence"""
+
     def __init__(self, *values):
         self._values = list(values)
 

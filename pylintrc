@@ -1,2 +1,5 @@
 [LOGGING]
 disable=logging-fstring-interpolation
+
+[DESIGN]
+disable=missing-function-docstring
