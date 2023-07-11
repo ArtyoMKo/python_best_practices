@@ -3,8 +3,11 @@ Docstrings and annotations
 """
 
 from dataclasses import dataclass
+from datetime import date
 from typing import List
 import logging
+
+from helpers.iterables import DateRangeIterable
 
 
 def first_example_of_docstring_usage():
@@ -73,3 +76,9 @@ if __name__ == "__main__":
     print(locate.__doc__)
     print(locate.__annotations__)
     print(locate(1, 1))
+    datetime_range = DateRangeIterable(
+        date(2023, 3, 3), date(2023, 3, 9)
+    )
+    print(f"max: {max(datetime_range)}")
+    print(next(datetime_range))
+    print(next(datetime_range))
