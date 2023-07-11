@@ -1,5 +1,5 @@
+[MASTER]
+ignore-patterns=(.)*_test\.py,test_(.)*\.py
+
 [LOGGING]
 disable=logging-fstring-interpolation
-
-[DESIGN]
-disable=missing-function-docstring
