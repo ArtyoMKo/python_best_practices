@@ -16,4 +16,5 @@ class Items(Sequence):
 
 
 def init_sequence(values: Iterable) -> Items:
+    # pylint: disable=missing-function-docstring
     return Items(values)
